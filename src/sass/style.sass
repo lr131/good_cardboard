@@ -55,7 +55,7 @@ $bg-button: #ff8d00
  font-size: 11px
 
 .header
- margin-bottom: 15px
+ margin-bottom: 10px
  &-contacts
   display: flex
   justify-content: flex-end
@@ -139,17 +139,19 @@ $bg-button: #ff8d00
     z-index: 0
   &-img
     position: relative
+    width: 496px
     img
-      margin-left: -97px
+      margin-left: -105px
+
     &::before
       content: ''
       position: absolute
-      width: 300px
-      height: 300px
+      width: 390px
+      height: 390px
       // left: 483px;
-      // top: 215px;
+      top: 10px;
       left: 50%
-      margin-left: -200px
+      margin-left: -256px
       border: 1px solid #fff
       border-radius: 50%
       z-index: -1
@@ -158,16 +160,18 @@ $bg-button: #ff8d00
       margin-bottom: 20px
       font-size: 41px
       font-weight: 700
+      line-height: 41px
     &__subtitle
       margin-bottom: 24px
       font-size: 28px
       font-weight: 300
+      line-height: 19px
     &__form
       width: 543px
       height: 248px
-      padding: 30px 27px
+      padding: 28px 27px
       background-color: rgba($text-color-light, 0.2)
-      border-radius: 10px
+      border-radius: 2px
 
 // __form
 .form
@@ -191,5 +195,6 @@ $bg-button: #ff8d00
     vertical-align: middle
     flex-basis: 60%
   &-help
+    margin-left: 20px
     font-size: 12px
     font-weight: 300
