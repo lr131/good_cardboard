@@ -68,6 +68,21 @@ $bg-button: #ff8d00
    border-left: 1px solid lighten($text-color-dark, 25)
    &:first-child
     border-left: none
+  a
+    text-decoration: none
+    color: $text-color-dark
+  a:link
+    color: $text-color-dark
+    text-decoration: none
+  a:visited
+    color: $text-color-dark
+    color: lighten($text-color-dark, 15)
+    text-decoration: none
+  a:hover
+    color: lighten($text-color-dark, 25)
+    text-decoration: none
+  a:active
+    color: $text-color-dark
 
 
 .nav-content
@@ -167,7 +182,7 @@ $bg-button: #ff8d00
       font-weight: 300
       line-height: 19px
     &__form
-      width: 543px
+      width: 536px
       height: 248px
       padding: 28px 27px
       background-color: rgba($text-color-light, 0.2)
@@ -180,7 +195,7 @@ $bg-button: #ff8d00
   // justify-content: space-between
   &-title
     margin-bottom: 20px
-    padding-right: 87px
+    padding-right: 80px
     font-size: 20px
     font-weight: 300
     line-height: 30px
@@ -194,6 +209,7 @@ $bg-button: #ff8d00
     border: none
     vertical-align: middle
     flex-basis: 60%
+    font-size: 14px
   &-help
     margin-left: 20px
     font-size: 12px
