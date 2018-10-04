@@ -1,3 +1,12 @@
+// reset styles
+// img
+//   max-width: 100%
+// body
+//   margin: 0
+input, button
+  &:focus
+    outline: none
+
 *
  box-sizing: border-box
 
@@ -28,6 +37,12 @@ $bg-button: #ff8d00
    height: 20px
    vertical-align: middle
    margin-right: 5px
+  &_big
+    padding-top: 20px
+    padding-bottom: 20px
+    font-size: 15px
+    font-weight: 300
+    vertical-align: middle
 
 @media(min-width: 1200px)
  .container
@@ -40,10 +55,12 @@ $bg-button: #ff8d00
  font-size: 11px
 
 .header
+ margin-bottom: 15px
  &-contacts
   display: flex
   justify-content: flex-end
   align-items: center
+  
   &__phone
    font-size: 22px
    margin-right: 13px
@@ -98,3 +115,81 @@ $bg-button: #ff8d00
   //  Цвет активных ссылок
   a:active
    color: $text-color-light
+
+
+// main.sass
+
+.first-screen
+  position: relative
+  padding-top: 65px
+  padding-bottom: 60px
+  background: #373737 url(../img/bg-first-screen.png) center no-repeat
+  background-size: cover
+  color: $text-color-light
+  z-index: 1
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: 0
+  &-img
+    position: relative
+    img
+      margin-left: -97px
+    &::before
+      content: ''
+      position: absolute
+      width: 300px
+      height: 300px
+      // left: 483px;
+      // top: 215px;
+      left: 50%
+      margin-left: -200px
+      border: 1px solid #fff
+      border-radius: 50%
+      z-index: -1
+  &-text
+    &__title
+      margin-bottom: 20px
+      font-size: 41px
+      font-weight: 700
+    &__subtitle
+      margin-bottom: 24px
+      font-size: 28px
+      font-weight: 300
+    &__form
+      width: 543px
+      height: 248px
+      padding: 30px 27px
+      background-color: rgba($text-color-light, 0.2)
+      border-radius: 10px
+
+// __form
+.form
+  display: flex
+  margin-bottom: 12px
+  // justify-content: space-between
+  &-title
+    margin-bottom: 20px
+    padding-right: 87px
+    font-size: 20px
+    font-weight: 300
+    line-height: 30px
+    &_uppercase
+      font-weight: 700
+      text-transform: uppercase
+  &__input
+    margin-right: 10px
+    border-radius: 4px
+    padding: 20px
+    border: none
+    vertical-align: middle
+    flex-basis: 60%
+  &-help
+    font-size: 12px
+    font-weight: 300
