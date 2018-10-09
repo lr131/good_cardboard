@@ -71,6 +71,7 @@ gulp.task( 'deploy', function () {
     var globs = [
         'src/css/**',
         'src/img/**',
+        'src/js/**',
         'src/index.html',
         'src/robots.txt'
     ];
