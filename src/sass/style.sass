@@ -349,6 +349,8 @@ $bg-button: #ff9d00
       line-height: 19.99px
     &__img
       margin-bottom: 19px
+      img
+        max-height: 290px
 .button-product
   margin-right: 12px
 
@@ -632,14 +634,6 @@ $bg-button: #ff9d00
           font-weight: 500
           line-height: 22px
           vertical-align: middle
-//   .first-screen-img, .hidden-boxes, .header-contacts__button__text
-//     display: none
-
-//   .header-contacts__phone
-//     font-size: 20px
-//   .first-screen
-//     &-text
-//       text-align: center
 
 @media (max-width: 768px)
   // nav
@@ -773,6 +767,20 @@ $bg-button: #ff9d00
     font-size: 15px
     font-weight: 500
     line-height: 22px
+
+  .features
+    padding-bottom: 10px
+    .number
+      display: block
+      width: 90%
+      margin-bottom: 15px
+      &__title
+        font-size: 30px
+    &-block
+      flex-basis: 90%
+      &s
+        justify-content: center
+
   .overlay
     width: 100%
     height: 100%
@@ -829,5 +837,7 @@ $bg-button: #ff9d00
           line-height: 22px
           vertical-align: middle
 
-
+@media (max-width: 398px)
+  .features-block__icon
+    display: none
 
