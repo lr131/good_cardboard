@@ -11,18 +11,21 @@ body
 
 // @import 'variables'
 $container-width: 968px
+$light-bg-color: #f4f4f4
 $text-color-dark: #373737
 $text-color-light: #fff
 // $bg-button: #ff8d00
-$bg-button: #ff9d00
+$bg-button: #ff9d00 
+
 
 // @import 'interface'
 .button
   font-family: "Roboto", sans-serif
   background-color: $bg-button
   font-size: 14px
+  height: 48px
   color: $text-color-light
-  border: none
+  border: 1px solid transparent
   padding: 13px 22px
   border-radius: 5px
   outline: none
@@ -36,9 +39,20 @@ $bg-button: #ff9d00
   &_big
     padding-top: 20px
     padding-bottom: 20px
+    height: 57px
     font-size: 15px
     font-weight: 300
     vertical-align: middle
+  &-o
+    border: 1px solid rgba($text-color-dark, 0.5)
+    background-color: transparent
+    color: $text-color-dark
+    font-size: 15px
+    font-weight: 400
+    line-height: 23.47px
+    &:hover
+      background-color: lighten($text-color-dark, 50)
+
 
 @media(min-width: 1200px)
  .container
@@ -47,7 +61,7 @@ $bg-button: #ff9d00
 // @import 'header'
 .nav
   margin-bottom: 15px
-  background-color: #373737
+  background-color: $text-color-dark
   font-size: 11px
 
   &__icon
@@ -180,13 +194,27 @@ $bg-button: #ff9d00
    color: $text-color-light
 
 
+.section-title
+  margin-bottom: 29px
+  text-align: center
+  font-size: 27px
+  font-weight: 700
+  line-height: 18px
+  text-transform: uppercase
+  &::after
+    margin-top: 12px
+    content: '' 
+    display: block
+    height: 6px
+    background: url(../img/icon-line.png) center no-repeat
+
 // main.sass
 
 .first-screen
   position: relative
   padding-top: 65px
   padding-bottom: 60px
-  background: #373737 url(../img/bg-first-screen.png) center no-repeat 
+  background: $text-color-dark url(../img/bg-first-screen.png) center no-repeat 
   background-size: cover
   color: $text-color-light
   z-index: 1
@@ -261,6 +289,71 @@ $bg-button: #ff9d00
     font-size: 13px
     font-weight: 300
 
+
+/* FEATURES SECTION */
+.features
+  padding-top: 49px
+  padding-bottom: 55px
+  background-color: $light-bg-color
+  .number
+    display: inline-block
+    width: 33%
+    vertical-align: top
+    text-align: center
+    &s
+      margin-bottom: 37px
+    &__title
+      margin-bottom: 10px
+      color: #f39003
+      font-size: 36px
+      font-weight: 900
+      sup
+        font-size: 24px
+        font-weight: 900
+    &__text
+      font-weight: 400
+
+  &-block
+    display: flex
+    flex-basis: 31.5%
+    align-items: center
+    padding: 28px 19px
+    margin-bottom: 30px
+    background-color: #fff
+    font-size: 15px
+    &s
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__icon
+      flex-basis: 40%
+      margin-right: 10px
+    &__title
+      margin-bottom: 5px
+      font-weight: 700
+    &__descr
+      font-weight: 300
+
+.product
+  &s
+    padding-top: 57px
+    padding-bottom: 73px
+  &-block
+    margin-bottom: 35px
+    text-align: center
+    &__title
+      margin-bottom: 28px
+      text-align: center
+      font-size: 20px
+      font-weight: 600
+      line-height: 19.99px
+    &__img
+      margin-bottom: 19px
+.button-product
+  margin-right: 12px
+
+
+
 // modal
 
 .overlay
@@ -298,7 +391,7 @@ $bg-button: #ff9d00
       font-weight: 500
       text-align: center
     &-main
-      background: #373737 url(../img/popup_bg.png) center no-repeat
+      background: $text-color-dark url(../img/popup_bg.png) center no-repeat
       background-size: cover
       padding: 35px 88px 50px 88px
       color: $text-color-light
@@ -479,6 +572,7 @@ $bg-button: #ff9d00
   .button_big
     display: block
     margin: 0 auto
+
     padding: 19px 29px
     font-size: 15px
     font-weight: 500
