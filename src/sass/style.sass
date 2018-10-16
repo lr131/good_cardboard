@@ -22,7 +22,7 @@ $bg-button: #ff9d00
 .button
   font-family: "Roboto", sans-serif
   background-color: $bg-button
-  font-size: 14px
+  font-size: 15px
   height: 48px
   color: $text-color-light
   border: 1px solid transparent
@@ -47,11 +47,10 @@ $bg-button: #ff9d00
     border: 1px solid rgba($text-color-dark, 0.5)
     background-color: transparent
     color: $text-color-dark
-    font-size: 15px
-    font-weight: 400
-    line-height: 23.47px
     &:hover
       background-color: lighten($text-color-dark, 50)
+  &-nav
+    height: initial
 
 
 @media(min-width: 1200px)
@@ -296,22 +295,21 @@ $bg-button: #ff9d00
   padding-bottom: 55px
   background-color: $light-bg-color
   .number
-    display: inline-block
-    width: 33%
-    vertical-align: top
-    text-align: center
     &s
-      margin-bottom: 37px
+      margin-bottom: 28px
+      vertical-align: top
+      text-align: center
     &__title
-      margin-bottom: 10px
+      margin-bottom: 4px
       color: #f39003
       font-size: 36px
       font-weight: 900
       sup
-        font-size: 24px
+        font-size: 37px
         font-weight: 900
     &__text
       font-weight: 400
+      font-size: 16px
 
   &-block
     display: flex
@@ -334,10 +332,10 @@ $bg-button: #ff9d00
     &__descr
       font-weight: 300
 
+/* PRODUCT SECTION */
 .product
   &s
     padding-top: 57px
-    padding-bottom: 73px
   &-block
     margin-bottom: 35px
     text-align: center
@@ -349,20 +347,173 @@ $bg-button: #ff9d00
       line-height: 19.99px
     &__img
       margin-bottom: 19px
+      height: 290px
       img
         max-height: 290px
 .button-product
   margin-right: 12px
 
+/* OFFER SECTION */
+.offer
+  position: relative
+  padding-top: 72px
+  padding-bottom: 69px
+  margin-right: auto
+  margin-left: auto
+  margin-bottom: 87px
+  margin-top: 38px
+  background: $text-color-dark url(../img/bg-individual-offer.png) center no-repeat 
+  background-size: cover
+  color: $text-color-light
+  text-align: center
+  z-index: 1
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: -1
+  &__title
+    font-size: 32px
+    font-weight: 400
+    line-height: 37px
+  &__subtitle
+    margin-bottom: 25px
+    font-size: 26px
+  &-form
+    &__text
+      margin: 0
+      margin-bottom: 17px
+      font-size: 20px
+      font-weight: 300
+      line-height: 30px
+    &__input
+      margin: 0
+      margin-bottom: 12px
+      input
+        margin-right: 0
+        width: 365px
+        font-size: 13px
+        text-align: center
+    &__button
+      margin: 0
+      margin-bottom: 9px
+      button
+        height: 53px
+        padding: 17px 28px
+    small
+      margin: 0
+      margin-top: 9px
+
+/* PRODUCTION SECTION */
+.production
+  margin-bottom: 97px
+  &-title
+    margin-top: 19px
+    margin-left: -30px
+    margin-bottom: 20px
+    padding-left: 30px
+    padding-top: 20px
+    padding-bottom: 16px
+    color: #fff
+    background-color: $bg-button
+    font-size: 28px
+    font-weight: 400
+    line-height: 22px
+  &-text
+    font-size: 16px
+    font-weight: 300
+    line-height: 24px
+  &-slider
+    &__top
+      margin-bottom: 13px
+      &_img
+        img
+          height: 377px
+          overflow-y: hidden
+    &__bottom
+      padding-left: 30px
+      padding-right: 30px
+      &_img
+        height: 78px
+        overflow: hidden
+      img
+        margin: 0 6px
+        height: 78px
+        overflow: hidden
+
+/* СТРЕЛКИ СЛАЙДЕРА */
+.slider-arrow
+  position: absolute
+  top: 0
+  // right: 0
+  height: 100%
+  width: 22px
+  z-index: 99
+  &-prod
+    border: 1px solid $bg-button
+  &:hover
+    cursor: pointer
+  &__right
+    right: 0
+    background: #fff url(../img/arrow_right.png) center no-repeat
+    &:hover
+      background: $bg-button url(../img/arrow_right_active.png) center no-repeat
+  &__left
+    left: 0
+    background: #fff url(../img/arrow_left.png) center no-repeat
+    &:hover
+      background: $bg-button url(../img/arrow_left_active.png) center no-repeat
+  &-feedback
+    background-color: transparent
+
+/* CLIENT SECTION */
 .client
+  display: flex
   padding: 16px 33px
   width: 212px
   height: 130px
+  text-align: center
+  justify-content: center
+  align-items: center
   margin-bottom: 33px
   border: 1px solid rgba(0, 0, 0, 0.1)
   img
-    margin-top: auto;
-    margin-bottom: auto;
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0)
+
+/* FEETBACK SECTION */
+.feedback
+  padding-top: 55px
+  padding-bottom: 66px
+  background-color: $light-bg-color
+  &-slider
+    img
+      margin: 0 auto
+    &__item
+      padding-top: 9px
+      width: 274px
+      height: 377px
+      margin: 0 25px
+      background: #fff
+      border: 1px solid rgba(0, 0, 0, 0.1)
+
+/* FOOTER SECTION */
+.footer
+  background-color: $text-color-dark
+  color: $text-color-light
+  padding-top: 36px
+  padding-bottom: 39px
+  text-align: center
+  &__text
+    font-size: 13px
+    font-weight: 300
+    line-height: 17px
 
 // modal
 
@@ -573,9 +724,6 @@ $bg-button: #ff9d00
     width: 150px
     height: 120px
     margin-bottom: 33px
-    img
-      margin-top: auto;
-      margin-bottom: auto;
 
   .button_big
     display: block
@@ -641,11 +789,23 @@ $bg-button: #ff9d00
           line-height: 22px
           vertical-align: middle
 
+@media (max-width: 855px)
+  .number
+    &__title
+      font-size: 30px
+      sup
+        font-size: 18px
+    &__text
+      font-weight: 400
+
 @media (max-width: 768px)
   // nav
-  .first-screen-img, .header-contacts__button__text
+  .first-screen-img, .header-contacts__button__text, .production-slider__bottom
     display: none
   .nav, .nav-content, .nav-item,
+    display: none
+  .section-title::after
+    content: ''
     display: none
   .nav, .header, .button img,
     margin: 0
@@ -657,7 +817,6 @@ $bg-button: #ff9d00
     display: -o-flex
     display: flex
     justify-content: space-between
-    // margin: 15px 0
     padding: 15px 0
     flex-direction: column
   .desctope-hidden-col-1
@@ -702,6 +861,8 @@ $bg-button: #ff9d00
       &__phone
         &s
           flex-direction: column
+          &__button
+            height: 29px
         font-size: 13px
         font-weight: 400
         line-height: 17px
@@ -774,23 +935,42 @@ $bg-button: #ff9d00
   .features
     padding-bottom: 10px
     .number
-      display: block
-      width: 90%
       margin-bottom: 15px
       &__title
         font-size: 30px
+        // line-height: 2
+        margin-top: 30px
     &-block
       flex-basis: 90%
       &s
         justify-content: center
   
+  .offer
+    margin-bottom: 13px
+
+  .production
+    margin-bottom: 56px
+    &-title
+      margin-right: -15px
+      margin-left: -15px
+      margin-top: 0
+      margin-bottom: 28px
+      text-align: center
+    &-text
+      text-align: center
+      margin-bottom: 20px
+
   .client
-    width: 143px
-    height: 87px
+    width: initial
+    min-width: 143px
+    height: initial
+    min-height: 87px
     margin-bottom: 33px
-    img
-      margin-top: auto;
-      margin-bottom: auto;
+
+  .feedback
+    padding-top: 36px
+    padding-bottom: 40px
+
   .overlay
     width: 100%
     height: 100%
@@ -848,6 +1028,14 @@ $bg-button: #ff9d00
           vertical-align: middle
 
 @media (max-width: 398px)
-  .features-block__icon
+  .features-block__icon, .production-slider__bottom
     display: none
+  .client
+    padding: 0
+    width: initial
+    min-width: 0
+    min-height: 0
+    height: initial
+    flex-basis: 45%
+    height: 87px
 

@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- Библиотеки -->
+    <link rel="stylesheet" href="slick/slick.css"/>
+    <link rel="stylesheet" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/animate.css">
+    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
@@ -63,7 +66,7 @@
                   </div>
                 </div>
                 <!-- /.header-contacts__phones -->
-                  <button class="header-contacts__button button">
+                  <button class="button header-contacts__button button-nav">
                     <img src="img/icon-phone.png" alt="phone-icon">
                     <span class="header-contacts__button__text">Заказать звонок</span>
                   </button>
@@ -132,30 +135,33 @@
   <section class="features">
     <div class="container">
       <div class="numbers">
-        <div class="number">
-          <div class="number__title">5 лет</div>
-          <!-- /.number__title -->
-          <div class="number__text">На рынке изделий из гофрокартона</div>
-          <!-- /.number__text -->
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="number__title">5 лет</div>
+            <!-- /.number__title -->
+            <div class="number__text">На рынке изделий из гофрокартона</div>
+            <!-- /.number__text -->
+          </div>
+          <!-- /.col-12 col-md-4 -->
+          <div class="col-12 col-md-4">
+            <div class="number__title">до 5 000 000 м<sup>2</sup></div>
+            <!-- /.number__title -->
+            <div class="number__text">Ежемесячный объем производства гофрокартона</div>
+            <!-- /.number__text -->
+          </div>
+          <!-- /.col-12 col-md-4 -->
+          <div class="col-12 col-md-4">
+            <div class="number__title">4 000 м<sup>2</sup></div>
+            <!-- /.number__title -->
+            <div class="number__text">Площадь склада</div>
+            <!-- /.number__text -->
+          </div>
+          <!-- /.col-12 col-md-4 -->
         </div>
-        <!-- /.number -->
-        <div class="number">
-          <div class="number__title">до 5 000 000 м<sup>2</sup></div>
-          <!-- /.number__title -->
-          <div class="number__text">Ежемесячный объем производства гофрокартона</div>
-          <!-- /.number__text -->
-        </div>
-        <!-- /.number -->
-        <div class="number">
-          <div class="number__title">4 000 м<sup>2</sup></div>
-          <!-- /.number__title -->
-          <div class="number__text">Площадь склада</div>
-          <!-- /.number__text -->
-        </div>
-        <!-- /.number -->
+        <!-- /.row -->
       </div>
-      <!-- /.numbers -->
       
+
       <div class="features-blocks">
         
         <div class="features-block wow fadeInUp">
@@ -322,11 +328,69 @@
   </section>
   <!-- /.products -->
 
+ <section class="offer">
+   <div class="container">
+     <div class="offer__title">Получите индивидуальное предложение</div>
+     <!-- /.offer__title -->
+     <div class="offer__subtitle">на производство и поставку изделий</div>
+     <!-- /.offer__subtitle -->
+     <div class="offer-form">
+       <div class="offer-form__text">Введите ваш номер телефона:</div>
+       <!-- /.offer-form__text -->
+       <div class="offer-form__input"><input class="form__input" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ"></div>
+       <!-- /.offer-form__input -->
+       <div class="offer-form__button"><button class="button">Оставить заявку!</button></div>
+       <!-- /.offer-form__button -->
+       <small class="form-help">*Минимальный заказ 500шт</small>
+     </div>
+     <!-- /.offer-form -->
+   </div>
+   <!-- /.container -->
+ </section>
+ <!-- /.offer -->
+
+ <section class="production">
+   <div class="container">
+     <div class="row">
+       <div class="col-12 order-2 col-md-7 order-md-1">
+         <div class="production-slider__top">
+           <div class="production-slider__top_img"><img src="img/production/example-1.jpg" alt="img"></div>
+           <div class="production-slider__top_img"><img src="img/production/example-2.jpg" alt="img"></div>
+           <div class="production-slider__top_img"><img src="img/production/example-3.jpg" alt="img"></div>
+           <div class="production-slider__top_img"><img src="img/production/example-4.jpg" alt="img"></div>
+           <div class="production-slider__top_img"><img src="img/production/example-5.jpg" alt="img"></div>
+         </div>
+         <div class="production-slider__bottom">
+           <div class="production-slider__bottom_img"><img src="img/production/example-1.jpg" alt="img"></div>
+           <div class="production-slider__bottom_img"><img src="img/production/example-2.jpg" alt="img"></div>
+           <div class="production-slider__bottom_img"><img src="img/production/example-3.jpg" alt="img"></div>
+           <div class="production-slider__bottom_img"><img src="img/production/example-4.jpg" alt="img"></div>
+           <div class="production-slider__bottom_img"><img src="img/production/example-5.jpg" alt="img"></div>
+         </div>
+         <!-- /.production-slider -->
+       </div>
+       <!-- /.col-12 col-md-7 -->
+       <div class="col-12 order-1 col-md-5 order-md-2">
+        <div class="production-title">Производство</div>
+        <div class="production-text">
+          Современное оборудование позволяет производить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.
+          Досконально прорабатываем конструкции коробов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции.
+          Возможно нанесение цветной флексопечати на поверхность коробов.
+        </div>
+       </div>
+       <!-- /.col-12 col-md-5 -->
+     </div>
+     <!-- /.row -->
+   </div>
+   <!-- /.container -->
+ </section>
+ <!-- /.production -->
+
   <section class="clients">
     <div class="container">
       <h2 class="section-title">Наши клиенты</h2>
       <!-- /.section-title -->
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center align-items-center">
         <div class=" col-6 col-md-3">
           <div class="client"><img src="img/clients/client-1.png" alt=""></div>
           <!-- /.client -->
@@ -349,7 +413,7 @@
         <!-- /.col-3 -->
       </div>
       <!-- /.row -->
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center align-items-center">
         <div class=" col-6 col-md-3">
           <div class="client"><img src="img/clients/client-5.png" alt=""></div>
           <!-- /.client -->
@@ -372,18 +436,18 @@
         <!-- /.col-3 -->
       </div>
       <!-- /.row -->
-      <div class="row justify-content-md-center">
-        <div class=" col-6 col-md-3">
+      <div class="row justify-content-md-center align-items-center">
+        <div class="col-6 col-md-3">
           <div class="client"><img src="img/clients/client-9.png" alt=""></div>
           <!-- /.client -->
         </div>
         <!-- /.col-3 -->
-        <div class=" col-6 col-md-3">
+        <div class="col-6 col-md-3">
           <div class="client"><img src="img/clients/client-10.png" alt=""></div>
           <!-- /.client -->
         </div>
         <!-- /.col-3 -->
-        <div class=" col-6 col-md-3">
+        <div class="col-6 col-md-3">
           <div class="client"><img src="img/clients/client-11.png" alt=""></div>
           <!-- /.client -->
         </div>
@@ -400,8 +464,31 @@
   </section>
   <!-- /.clients -->
 
+<section class="feedback">
+  <div class="container">
+    <h2 class="section-title">Отзывы о сотрудничестве</h2>
+    <!-- /.section-title -->
+    <div class="feedback-slider">
+      <div class="feedback-slider__item"><img src="img/feedback/feedback-1.png" alt="feedback"></div>
+      <div class="feedback-slider__item"><img src="img/feedback/feedback-2.png" alt="feedback"></div>
+      <div class="feedback-slider__item"><img src="img/feedback/feedback-3.png" alt="feedback"></div>
+      <div class="feedback-slider__item"><img src="img/feedback/feedback-1.png" alt="feedback"></div>
+      <div class="feedback-slider__item"><img src="img/feedback/feedback-2.png" alt="feedback"></div>
+    </div>
+    <!-- /.feedback-slider -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.feedback -->
 
-
+ <footer class="footer">
+   <div class="container">
+     <div class="footer__text">© www.gofra-ural.ru 2016, все права защищены</div>
+     <!-- /.footer__text -->
+   </div>
+   <!-- /.container -->
+ </footer>
+ <!-- /.footer -->
 
 
 
@@ -465,6 +552,7 @@
   </script>
   <script src='js/wow.min.js'></script>
   <script>new WOW().init();</script>
+  <script src='slick/slick.min.js'></script>
   <script src='js/scrpit.js'></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ var sass = require('gulp-sass');
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 var clean = require('gulp-clean');
-var folder = '/www/lr131.ru/lesson_19/'
+var folder = '/www/lr131.ru/lesson_21/'
 
 //Запуск стат.сервара -bs, предварительно скомпилировав sass
 gulp.task('bs', ['sass'], function() {
@@ -72,6 +72,7 @@ gulp.task( 'deploy', function () {
         'src/css/**',
         'src/img/**',
         'src/js/**',
+        'src/slick/**',
         'src/index.html',
         'src/robots.txt'
     ];
