@@ -1,0 +1,95 @@
+.nav
+  margin-bottom: 15px
+  background-color: $text-color-dark
+  font-size: 11px
+
+  &__icon
+    display: none
+    cursor: pointer
+    position: relative
+    width: 23px
+    height: 17px
+    $nav-icon-width: 18px
+    $nav-icon-height: 2px
+    span, span::before, span::after
+      position: absolute
+      left: 50%
+      top: 50%
+      display: block
+      height: $nav-icon-height
+      width: $nav-icon-width
+      margin-left: -($nav-icon-width/2)
+      margin-top: -($nav-icon-height/2)
+      background-color: #333
+    span::before
+      content: ''
+      margin-top: -6px
+    span::after
+      content: ''
+      margin-top: 4px
+
+  &-bottom
+    top: 16px
+
+  &-top-click
+    backface-visibility: hidden
+    top: 15px
+    transform: rotate(50deg)
+    transition: 0.55s 0.5s
+
+  &-middle-click
+    opacity: 0
+
+  &-bottom-click
+    backface-visibility: hidden
+    top: 15px
+    transform: rotate(-410deg)
+    transition: 0.55s 0.5s
+
+    // TODO: top15 заменить по-человечески
+
+.nav-content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  align-content: center
+  list-style: none
+  padding: 10px 0
+  margin: 0
+  height: 100%
+
+.nav-item 
+  display: flex
+  align-items: center
+  align-content: center
+  justify-content: center
+  height: 25px
+  padding: 0 15px
+  color: $text-color-light
+  border-left: 1px dotted lighten($text-color-dark, 25)
+  &:first-child
+   border-left: none
+ 
+  a
+   align-items: center
+   align-content: center
+   text-align: center
+   vertical-align: center
+   color: $text-color-light
+   text-transform: uppercase
+  // Цвет непосещенных ссылок
+  a:link
+   color: $text-color-light
+   text-decoration: none
+   // Цвет посещенных ссылок
+  a:visited
+   color: $text-color-light
+   color: darken($text-color-light, 15)
+   text-decoration: none
+   //  Цвет ссылок при наведении на них курсора мыши
+  a:hover
+   color: lighten($text-color-dark, 55)
+   text-decoration: none
+  //  Цвет активных ссылок
+  a:active
+   color: $text-color-light

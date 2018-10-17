@@ -1,40 +1,15 @@
-var Menu = {
-  
-  el: {
-    ham: $('.nav'),
-    menuTop: $('.nav-top'),
-    menuMiddle: $('.nav-middle'),
-    menuBottom: $('.nav-bottom')
-  },
-  
-  init: function() {
-    Menu.bindUIactions();
-  },
-  
-  bindUIactions: function() {
-    Menu.el.ham
-        .on(
-          'click',
-        function(event) {
-        Menu.activateMenu(event);
-        event.preventDefault();
-      }
-    );
-  },
-  
-  activateMenu: function() {
-    Menu.el.menuTop.toggleClass('nav-top-click');
-    Menu.el.menuMiddle.toggleClass('nav-middle-click');
-    Menu.el.menuBottom.toggleClass('nav-bottom-click'); 
-  }
-};
-
-Menu.init();
 
 // СЛАЙДЕР
 
 $(document).ready(function(){
- $('.production-slider__top').slick({
+  $(".header-contacts__button").on("click", function() {
+    $(".overlay").show()
+  });
+  $(".popup-close").on("click", function() {
+    $(".overlay").hide()
+  });
+  $(".popup-form__input,.form__input").mask("+7 (999) 999-99-99");
+  $('.production-slider__top').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -47,9 +22,10 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
+        fade: true,
         centerMode: true,
-        prevArrow: '<div class="slider-arrow slider-arrow-prod slider-arrow__left"></div>',
-        nextArrow: '<div class="slider-arrow slider-arrow-prod slider-arrow__right"></div>'
+        prevArrow: '<div class="slider-arrow slider-arrow-mobile slider-arrow-mobile__left"></div>',
+        nextArrow: '<div class="slider-arrow slider-arrow-mobile slider-arrow-mobile__right"></div>'
       }
     }
   ]
@@ -75,8 +51,8 @@ $(document).ready(function(){
  $('.feedback-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow: '<div class="slider-arrow slider-arrow-feedback slider-arrow__left"></div>',
-  nextArrow: '<div class="slider-arrow slider-arrow-feedback slider-arrow__right"></div>',
+  prevArrow: '<div class="slider-arrow slider-arrow-feedback slider-arrow-feedback__left"></div>',
+  nextArrow: '<div class="slider-arrow slider-arrow-feedback slider-arrow-feedback__right"></div>',
   responsive: [
     {
       breakpoint: 768,
@@ -84,8 +60,9 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        prevArrow: '<div class="slider-arrow slider-arrow-prod slider-arrow__left"></div>',
-        nextArrow: '<div class="slider-arrow slider-arrow-prod slider-arrow__right"></div>'
+        fade: true,
+        prevArrow: '<div class="slider-arrow slider-arrow-mobile slider-arrow-mobile__left feedback-mobile__left"></div>',
+        nextArrow: '<div class="slider-arrow slider-arrow-mobile slider-arrow-mobile__right feedback-mobile__right"></div>'
       }
     }
   ]

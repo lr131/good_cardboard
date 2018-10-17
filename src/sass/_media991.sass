@@ -1,0 +1,177 @@
+@media (max-width: 990px)
+  .first-screen-img, .header-contacts__button__text
+    display: none
+  .nav, .nav-content, .nav-item,
+    display: none
+  .nav, .header, .button img,
+    margin: 0
+    padding: 0
+  .header-main
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: space-between
+    // margin: 15px 0
+    padding: 15px 0
+    flex-direction: column
+  .desctope-hidden-col-1
+    display: block
+    flex: 0 0 8.333333%
+    max-width: 8.333333%  
+  .nav
+    &__icon
+      display: block
+  .nav
+    order: 2
+    margin-right: 15px
+    width: 23px
+    // Стили активного меню:
+    // width: 100%
+    background-color: $text-color-dark
+    color: $text-color-light
+    font-size: 18px
+    line-height: 24
+    &-active
+      flex: 0 0 100%
+      max-width: 100%
+    &__icon
+      z-index: 20
+      display: block
+    &-content
+      flex-direction: column
+    &-item
+      height: 40px
+      border-left: none
+ 
+  .header
+    width: 100%
+    &-contacts
+      align-self: flex-end
+      &__phone
+        &s
+          flex-direction: column
+        font-size: 18px
+        font-weight: 400
+        line-height: 17px
+        border: none
+  .phone-strong-mobile
+    font-weight: 900
+  .button
+    display: inline-block
+    padding: 7px
+    border-radius: 4px
+    img
+      vertical-align: middle 
+
+  .first-screen
+    padding-top: 50px
+    text-align: center
+    &-text
+      &__title
+        color: $active-color
+        font-size: 22px
+        font-weight: 700
+        line-height: 24px
+      &__subtitle
+        margin-bottom: 40px
+        font-size: 18px
+        font-weight: 400
+        line-height: 24px
+      &__form
+        width: 100%
+        padding: 0
+        background: transparent
+        
+    .form
+      display: block
+      text-align: center
+      &-title
+        padding: 0
+        font-size: 15px
+        font-weight: 300
+        line-height: 18px
+        &_uppercase
+          font-weight: 700
+      &-help
+        margin: 0
+        font-size: 13px
+        font-weight: 300
+        line-height: 30px
+      &__input
+        display: block
+        margin: 15px auto
+        padding: 17px 70px
+        font-size: 13px
+        font-weight: 300
+        line-height: 42px
+
+  .client
+    width: 150px
+    height: 120px
+    margin-bottom: 33px
+
+  .button_big
+    display: block
+    margin: 0 auto
+
+    padding: 19px 29px
+    font-size: 15px
+    font-weight: 500
+    line-height: 22px
+  .overlay
+    width: 100%
+    height: 100%
+    .popup
+      position: fixed
+      left: 50%
+      width: 80%
+      transform: translateX(-50%)
+      &-title
+        font-size: 15px
+      &-main
+        padding: 15px
+      &-form
+        text-align: center
+        &__title
+          padding: 0
+          color: $active-color
+          font-size: 15px
+          font-weight: 700
+          line-height: 24px
+          
+          &_small
+            font-size: 18px
+        &__label
+          display: block
+          margin-top: 15px
+          font-size: 15px
+          font-weight: 300
+          line-height: 20px
+          text-align: center
+        &__input
+          width: 100%
+          height: 100%
+          border-radius: 4px
+          padding: 20px
+          border: none
+          padding: 5px 70px
+          font-size: 13px
+          font-weight: 300
+          line-height: 42px
+          vertical-align: middle
+        &__small
+          margin-top: 9px
+          font-size: 14px
+          font-weight: 300
+          line-height: 30px
+          text-align: center
+        &__button
+          margin-top: 17px
+          width: 100%
+          height: 56px
+          font-size: 15px
+          font-weight: 500
+          line-height: 22px
+          vertical-align: middle

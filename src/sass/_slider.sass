@@ -1,0 +1,61 @@
+/* ЗАТЕМНЕНИЕ СЛАЙДЕРА */  
+.production-slider__bottom_img::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.05)
+  z-index: 3
+.slick-center::before
+  content: none
+
+/* СТРЕЛКИ СЛАЙДЕРА */
+$slider-arrow-mobile-width: 22px
+$slider-arrow-mobile-height: 79px
+.slider-arrow
+  position: absolute
+  top: 0
+  // right: 0
+  height: 100%
+  width: 22px
+  z-index: 99
+  &-prod
+    border: 1px solid $active-color
+  &:hover
+    cursor: pointer
+  &__right
+    right: 0
+    background: #fff url(../img/arrow_right.png) center no-repeat
+    &:hover
+      background: $active-color url(../img/arrow_right_active.png) center no-repeat
+  &__left
+    left: 0
+    background: #fff url(../img/arrow_left.png) center no-repeat
+    &:hover
+      background: $active-color url(../img/arrow_left_active.png) center no-repeat
+  &-feedback
+    background-color: transparent
+    &__right
+      right: 0
+      background: url(../img/arrow-feedback_right.png) center no-repeat
+      &:hover
+        background: $active-color url(../img/arrow-feedback_right_active.png) center no-repeat
+    &__left
+      left: 0
+      background: url(../img/arrow-feedback_left.png) center no-repeat
+      &:hover
+        background: $active-color url(../img/arrow-feedback_left_active.png) center no-repeat
+  &-mobile
+    width: $slider-arrow-mobile-width
+    height: $slider-arrow-mobile-height
+    top: 50%
+    transform: translateY(-50%)
+    &__right
+      right: 0
+      background: $active-color url(../img/arrow_right_active.png) center no-repeat
+    &__left
+      left: 0
+      background: $active-color url(../img/arrow_left_active.png) center no-repeat
+        

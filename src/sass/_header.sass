@@ -1,0 +1,41 @@
+.header
+  margin-bottom: 10px
+  &-logo
+    background: url(../img/logo.png) center no-repeat
+    background-size: 100%
+    width: 191px
+    height: 61px
+  &-contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  
+    &__phone
+      &s
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+      font-size: 22px
+      margin-right: 13px
+      padding-left: 15px
+      border-left: 1px solid lighten($text-color-dark, 25)
+      &:first-child
+        border-left: none
+  a
+    text-decoration: none
+    color: $text-color-dark
+  a:link
+    color: $text-color-dark
+    text-decoration: none
+  a:visited
+    color: $text-color-dark
+    color: lighten($text-color-dark, 15)
+    text-decoration: none
+  a:hover
+    color: lighten($text-color-dark, 25)
+    text-decoration: none
+  a:active
+    color: $text-color-dark
+

@@ -80,3 +80,5 @@ package-lock.json
 *.psd
 
 *.zip
+
+gulp*.js
