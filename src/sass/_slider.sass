@@ -1,15 +1,19 @@
 /* ЗАТЕМНЕНИЕ СЛАЙДЕРА */  
-.production-slider__bottom_img::before
-  content: ''
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background-color: rgba(#000, 0.05)
-  z-index: 3
-.slick-center::before
-  content: none
+.production-slider__bottom img
+  filter: brigthness(20%)
+  // &::before
+  //   content: ''
+  //   position: absolute
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   height: 100%
+  //   background-color: rgba(#000, 0.05)
+  //   z-index: 3
+.slick-center
+  filter: brigthness(100%)
+  // &::before
+  //   content: none
 
 /* СТРЕЛКИ СЛАЙДЕРА */
 $slider-arrow-mobile-width: 22px
