@@ -81,4 +81,4 @@ package-lock.json
 
 *.zip
 
-gulp*.js
+gulpfile.js
